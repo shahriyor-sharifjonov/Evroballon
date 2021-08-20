@@ -467,7 +467,7 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    @include media(1200){
+    @include media(992){
       display: none;
     }
     &-list{
@@ -483,6 +483,9 @@
       justify-content: center;
       &:not(:last-of-type){
         margin-right: 50px;
+        @include media(1200){
+          margin-right: 25px;
+        }
       }
     }
     &-link{

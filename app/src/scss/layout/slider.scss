@@ -1,0 +1,233 @@
+.slider{
+  margin-top: 25px;
+  margin-bottom: 85px;
+  &_1{
+    .slider__item{
+      background: #25A1D3;
+      border-radius: 10px;
+    }
+    .slider__title{
+      color: #FFFFFF;
+    }
+    .slider__p{
+      color: #F3F3F3;
+    }
+  }
+  &_2{
+    .slider__item{
+      background: #FCFCFC;
+      border-radius: 10px;
+    }
+  }
+  &__inner{
+    padding: 0 25px;
+    position: relative;
+    @include media($sm){
+      padding: 0;
+    }
+  }
+  &__title{
+    font-weight: 900;
+    font-size: 48px;
+    color: #012D5A;
+    margin-bottom: 15px;
+    @include media($lg){
+      font-size: 36px;
+    }
+    @include media($md){
+      font-size: 28px;
+    }
+    @include media($sm){
+      font-size: 20px;
+    }
+    @include media(360){
+      font-size: 17px;
+    }
+  }
+  &__p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 100%;
+    color: #012D5A;
+    @include media($md){
+      font-size: 16px;
+    }
+    @include media($sm){
+      display: none;
+    }
+  }
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 20px 0 20px 20px;
+    @include media($md){
+      width: 60%;
+    }
+    @include media($sm){
+      padding: 20px 13px;
+    }
+  }
+  &__image{
+    background: #fff;
+    padding: 20px;
+    width: calc(50% - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    @include media($lg){
+      width: calc(50% - 75px);
+    }
+    @include media($md){
+      width: calc(40% - 50px);
+    }
+    @include media($sm){
+      padding: 12px 6px;
+      width: calc(40% - 30px);
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      background: #fff;
+      width: 100px;
+      height: 102%;
+      right: 100%;
+      transform: translateX(1px);
+      top: 0;
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+      @include media($lg){
+        width: 75px;
+      }
+      @include media($md){
+        width: 50px;
+        transform: translateX(1px);
+        top: -1px;
+      }
+      @include media($sm){
+        width: 30px;
+      }
+    }
+    &_2{
+      background: transparent;
+      padding: 20px;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 100%;
+      @include media($md){
+        width: 40%;
+      }
+      @include media($sm){
+        padding: 12px 6px;
+      }
+    }
+  }
+  &__img{
+    max-width: 100%;
+    &_2{
+      max-width: 100%;
+    }
+  }
+  .slick{
+    &-list{
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    &-track{
+      display: flex;
+    }
+    &-arrow{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      border: none;
+      font-size: 0;
+    }
+    &-next{
+      right: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      z-index: 2;
+      background-color: #fff;
+      object-position: center;
+      filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.05));
+      transform: rotate(180deg) translateY(50%);
+      cursor: pointer;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 7px;
+        height: 12px;
+        transform: translate(-50%, -50%);
+        background: url('../images/slider-arrow.svg') center / contain no-repeat;
+        z-index: 1;
+      }
+    }
+    &-prev{
+      left: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      z-index: 2;
+      background-color: #fff;
+      object-position: center;
+      filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.05));
+      cursor: pointer;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 7px;
+        height: 12px;
+        transform: translate(-50%, -50%);
+        background: url('../images/slider-arrow.svg') center / contain no-repeat;
+        z-index: 1;
+      }
+    }
+    &-dots{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li{
+        &:not(:last-child){
+          margin-right: 16px;
+        }
+        &.slick-active{
+          button{
+            background: #25A1D3;
+          }
+        }
+        button{
+          font-size: 0px;
+          background: #A6B0B9;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
