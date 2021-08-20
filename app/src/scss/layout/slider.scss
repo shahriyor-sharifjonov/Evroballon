@@ -1,6 +1,7 @@
 .slider{
   margin-top: 25px;
   margin-bottom: 85px;
+  user-select: none;
   &_1{
     .slider__item{
       background: #25A1D3;
