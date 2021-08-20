@@ -151,14 +151,13 @@
     &-arrow{
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-50%) scale(1);
       z-index: 1;
       border: none;
       font-size: 0;
     }
     &-disabled{
-      opacity: 0;
-      visibility: hidden;
+      transform: scale(0) !important;
     }
     &-next{
       right: -25px;
