@@ -7,6 +7,10 @@
     line-height: 100%;
     color: #333333;
     margin-bottom: 30px;
+    @include media($sm){
+      font-size: 16px;
+      line-height: 100%;
+    }
   }
   &__content{
     margin-right: -30px;
@@ -280,6 +284,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    p{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      color: #181818;
+      @include media($sm){
+        font-size: 16px;
+      }
     }
   }
 }
