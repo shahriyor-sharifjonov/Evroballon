@@ -1,1 +1,78 @@
-
+mixin header()
+  .header#header
+    .header__top  
+      .header__top-body.container
+        .header__top-left 
+          a(href="#!").header__location
+            i.i-location.header__location-i
+            p.header__location-p Петропавловск-Камчатский
+          a(href="#!").header__location-p Доставка 
+        ul.header__top-list
+          li.header__top-li   
+            a(href="#!").header__top-link О компании
+          li.header__top-li   
+            a(href="#!").header__top-link Контакты
+          li.header__top-li   
+            a(href="#!").header__top-link Оптовикам
+          li.header__top-li   
+            a(href="#!").header__top-link Личный кабинет
+            i.i-bottom-arrow.header__top-link__i
+    .header__nav.container
+      button.header__button 
+        span.header__button-line
+      a(href="index.html").header__logo
+        img(src="images/logo.webp", alt="logo").header__logo-img
+        img(src="images/logo-light.svg", alt="logo").header__logo-img_light
+      form(action="").header__search
+        input(type="text" placeholder="Поиск").header__search-input
+        button(type="submit").header__search-button 
+          i.i-search 
+      .header__btns
+        a(href="#!").header__favourites
+          i(data-value="5").i-heart.header__favourites-i
+          p.header__favourites-p Избранное
+        a(href="#!").header__settings
+          i.i-settings.header__settings-i 
+          p.header__settings-p Сравнение
+      .header__contacts 
+        .header__tel
+          i.i-telephone.header__tel-i 
+          div
+            a(href="tel:84958888888").header__tel-tel 8 (495) 888-88-88
+            a(href="#!").header__tel-link Заказать звонок 
+        .header__tel
+          i(data-value="5").i-cart.header__tel-i 
+          div
+            p.header__tel-tel 13 500р.
+            a(href="#!").header__tel-link Оформить заказ
+    .header__cats
+      ul.header__cats-list.container
+        li.header__cats-li
+          a(href="#!").header__cats-link.active
+            svg(width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg")
+              rect(width="3" height="3.00006" fill="white")
+              rect(y="6" width="3" height="3.00006" fill="white")
+              rect(y="12" width="3" height="3.00006" fill="white")
+              rect(x="6" width="3" height="3.00006" fill="white")
+              rect(x="6" y="6" width="3" height="3.00006" fill="white")
+              rect(x="6" y="12" width="3" height="3.00006" fill="white")
+              rect(x="12" width="3" height="3.00006" fill="white")
+              rect(x="12" y="6" width="3" height="3.00006" fill="white")
+              rect(x="12" y="12" width="3" height="3.00006" fill="white")
+            p.header__cats-link__p Каталог
+        li.header__cats-li 
+          a(href="#!").header__cats-link Акции 
+        li.header__cats-li 
+          a(href="#!").header__cats-link Баллоны 
+        li.header__cats-li 
+          a(href="#!").header__cats-link Плиты 
+        li.header__cats-li 
+          a(href="#!").header__cats-link Редукторы 
+        li.header__cats-li 
+          a(href="#!").header__cats-link Обогреватели 
+        li.header__cats-li 
+          a(href="#!").header__cats-link Горелки
+        li.header__cats-li 
+          a(href="#!").header__cats-link Рампы
+        li.header__cats-li 
+          a(href="#!").header__cats-link Обогреватели 
