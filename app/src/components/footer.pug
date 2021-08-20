@@ -4,6 +4,15 @@ mixin footer()
       .footer__top 
         a(href="index.html").footer__logo
           img(src="images/logo-white.webp", alt="").footer__logo-img
+        ul.footer__bottom-list.dn 
+          li.footer__bottom-li.footer__bottom-li_with-icon
+            a(href="#!").footer__bottom-link
+          li.footer__bottom-li.footer__bottom-li_with-icon.ml-20 
+            a(href="#!" target="_blank").footer__bottom-link.i-instagram
+          li.footer__bottom-li.footer__bottom-li_with-icon.ml-20 
+            a(href="#!" target="_blank").footer__bottom-link.i-facebook
+          li.footer__bottom-li.footer__bottom-li_with-icon.ml-20 
+            a(href="#!" target="_blank").footer__bottom-link.i-wk
         ul.footer__top-list 
           li.footer__top-li 
             a(href="#!").footer__top-link О компании 
@@ -13,6 +22,19 @@ mixin footer()
             a(href="#!").footer__top-link Оптовикам
           li.footer__top-li 
             a(href="#!").footer__top-link Контакты
+          li.footer__top-li.on-in-mob  
+            a(href="#!").footer__top-link Подарочные сертификаты
+        ul.footer__top-list.on-in-mob
+          li.footer__top-li  
+            a(href="#!").footer__top-link Оплата и доставка 
+          li.footer__top-li  
+            a(href="#!").footer__top-link Гарантия и возврат
+          li.footer__top-li  
+            a(href="#!").footer__top-link Акции и скидки
+          li.footer__top-li  
+            a(href="#!").footer__top-link Новости и статьи
+          li.footer__top-li  
+            a(href="#!").footer__top-link Личный кабинет
         a(href="#!").footer__btn Записаться на консультацию 
       .footer__middle 
         ul.footer__middle-list 

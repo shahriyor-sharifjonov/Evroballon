@@ -1,20 +1,74 @@
 .footer{
   background: #2B2B2B;
   padding: 35px 0 0 0;
+  &__logo{
+    img{
+      max-width: 100%;
+    }
+    @include media(1200){
+      max-width: 120px;
+    }
+    @include media($lg){
+      margin-bottom: 20px;
+      max-width: max-content;
+    }
+    @include media(370){
+      max-width: 130px;
+    }
+  }
   &__top{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 30px;
     border-bottom: 1px solid #3D3D3D;
+    @include media($lg){
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
     &-list{
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include media($lg){
+        order: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 50%;
+      }
+      @include media($md){
+        align-items: flex-start;
+      }
+      &.on-in-mob{
+        display: none;
+        @include media($lg){
+          display: flex;
+        }
+      }
     }
     &-li{
+      @include media($md){
+        max-width: 200px;
+      }
       &:not(:last-child){
         margin-right: 50px;
+        @include media(1400){
+          margin-right: 20px;
+        }
+        @include media(1200){
+          margin-right: 20px;
+        }
+        @include media($lg){
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+      }
+      .on-in-mob{
+        display: none;
+        @include media($lg){
+          display: block;
+        }
       }
     }
     &-link{
@@ -23,6 +77,18 @@
       font-size: 18px;
       line-height: 100%;
       color: #FFFFFF;
+      @include media(1400){
+        font-size: 16px;
+      }
+      @include media(1200){
+        font-size: 14px;
+      }
+      @include media($lg){
+        font-size: 18px;
+      }
+      @include media(360){
+        font-size: 15px;
+      }
     }
   }
   &__btn{
@@ -36,6 +102,13 @@
     border: 1px solid #A6B0B9;
     box-sizing: border-box;
     border-radius: 34px;
+    @include media(1200){
+      padding: 16px 12px;
+    }
+    @include media($lg){
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
   &__middle{
     display: flex;
@@ -44,6 +117,9 @@
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #3D3D3D;
+    @include media($lg){
+      display: none;
+    }
     &-list{
       display: flex;
       justify-content: space-between;
@@ -52,6 +128,9 @@
     &-li{
       &:not(:last-child){
         margin-right: 40px;
+        @include media(1200){
+          margin-right: 15px;
+        }
       }
     }
     &-link{
@@ -68,14 +147,44 @@
     align-items: center;
     padding-top: 24px;
     padding-bottom: 20px;
+    @include media($lg){
+      flex-direction: column;
+      align-items: flex-start;
+    }
     &-list{
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include media($lg){
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &.dn{
+        display: none;
+        @include media($lg){
+          display: flex;
+          margin-bottom: 20px;
+          flex-direction: row;
+        }
+      }
+      &:last-child{
+        .footer__bottom-li:nth-child(2),
+        .footer__bottom-li:nth-child(3),
+        .footer__bottom-li:nth-child(4){
+          display: none;
+        }
+      }
     }
     &-li{
+      @include media($lg){
+        margin-left: 0;
+        margin-bottom: 20px;
+      }
       &:not(:last-child){
         margin-right: 50px;
+        @include media(1200){
+          margin-right: 20px;
+        }
       }
       &_with-icon{
         margin-right: 0 !important;

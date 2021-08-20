@@ -76,6 +76,10 @@ $break-point in $sizes {
 
 @mixin media($size) {
   @media (max-width:#{$size}px) {
-    @content
+    @content;
   }
+}
+
+.ml-20{
+  margin-left: 20px !important;
 }
