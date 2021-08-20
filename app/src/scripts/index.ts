@@ -64,6 +64,18 @@ window.addEventListener('click', function(e){
   }
 })
 
+// Heart click
+if(document.getElementsByClassName('.products__item-heart')){
+  let heart = document.getElementsByClassName('products__item-heart');
+  window.addEventListener('click', function(e){
+    for(let i = 0; i < heart.length; i++){
+      if(e.target == heart[i]){
+        e.target.classList.toggle('active');
+      }
+    }
+  })
+}
+
 // Slider
 $('.main-slider_1').slick({
   infinite: true,
@@ -95,3 +107,26 @@ $('.main-slider_2').slick({
       }
     },
 });
+$('.main-slider_3').slick({
+  infinite: false,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  dots: true,
+  // autoplay: true,
+  // autoplaySpeed: 1500,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        slidesToShow: 2,
+      }
+    },
+});
+

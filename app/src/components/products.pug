@@ -1,0 +1,38 @@
+mixin product()
+  .products__item.slider__item 
+    .products__item-top 
+      p.products__item-discount Скидка 10%
+      .products__item-top__btns 
+        a(href="#!").i-heart.products__item-top__btn.products__item-heart 
+        a(href="#!").i-settings.products__item-top__btn.products__item-settings 
+      img(src="images/item.webp", alt="").products__item-img
+    .products__item-content 
+      .products__item-title Автоматически переключаемый регулятор SRG
+      .products__item-row 
+        .products__item-star 
+          img(src="images/star.svg", alt="star").products__item-star__img
+          p.products__item-star__p 4,6
+        a(href="#!").products__item-review 1 отзыв
+      p.products__item-price 5 175р.
+      a(href="#!").products__item-btn.current Купить в один клик
+      a(href="#!").products__item-btn В корзину 
+      a(href="#!").products__item-btn.show-on-mobile
+        i.i-cart 
+        p Купить 
+
+      
+
+
+mixin products()
+  .products
+    .products__body.container
+      h2.products__title Хиты продаж
+      .products__content.products__content_4.slider.slider-3
+        .products__content-body.main-slider_3.slider__inner
+          +product()
+          +product()
+          +product()
+          +product()
+          +product()
+          +product()
+          +product()
