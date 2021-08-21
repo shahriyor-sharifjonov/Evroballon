@@ -37,6 +37,20 @@ mixin products()
           +product()
           +product()
 
+mixin products2()
+  .products
+    .products__body.container
+      h2.products__title Новинки
+      .products__content.products__content_4.slider.slider-3
+        .products__content-body.main-slider_3.slider__inner
+          +product()
+          +product()
+          +product()
+          +product()
+          +product()
+          +product()
+          +product()
+
 
 mixin categories()
   .categories 
