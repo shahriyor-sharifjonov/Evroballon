@@ -152,3 +152,26 @@ $('.advantages2__body').slick({
     },
 });
 
+$('.reviews__slider').slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  dots: true,
+  autoplay: false,
+  autoplaySpeed: 1600,
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+      }
+    },
+});
+

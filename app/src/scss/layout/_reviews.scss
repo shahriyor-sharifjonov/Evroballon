@@ -1,0 +1,125 @@
+.reviews{
+  &__body{
+
+  }
+  .slick-list{
+    margin-right: -30px;
+    @include media($md){
+      margin-right: 0;
+    }
+  }
+  &__maintitle{
+    margin-bottom: 30px;
+  }
+  &__title{
+    margin-bottom: 18px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+    color: #181818;
+    @include media($md){
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @include media($sm){
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    background: #F5FCFF;
+    border-radius: 10px;
+    @include media($md){
+      align-items: flex-start;
+      padding-top: 10px;
+      padding-left: 10px;
+      margin-right: 0;
+    }
+  }
+  &__image{
+    background: #FAFAFA;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 170px;
+    width: 100%;
+    @include media($md){
+      min-width: 90px;
+      width: 90px;
+      height: 90px;
+    }
+  }
+  &__img{
+    max-width: 100%;
+    object-fit: cover;
+  }
+  &__content{
+    padding: 20px 35px 20px 20px;
+    @include media($md){
+      align-items: flex-start;
+      padding-top: 0;
+    }
+  }
+  &__p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    color: #181818;
+    margin-bottom: 18px;
+    @include media($md){
+      margin-left: -90px;
+    }
+    @include media($sm){
+      font-size: 12px;
+      line-height: 130%;
+      margin-bottom: 10px;
+    }
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+    @include media($md){
+      margin-left: -90px;
+    }
+  }
+  &__star{
+    max-width: 100%;
+    height: max-content;
+    margin-right: 11px;
+  }
+  &__date{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    color: #181818;
+    @include media($sm){
+      font-size: 12px;
+      line-height: 100%;
+    }
+  }
+  &__link{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+    color: #25A1D3;  
+    @include media($md){
+      margin-left: -90px;
+    }  
+    @include media($sm){
+      font-size: 14px;
+      line-height: 130%;
+    }  
+  }
+}
