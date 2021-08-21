@@ -1,0 +1,36 @@
+.discount{
+  margin-top: 30px;
+  &__cat{
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+  }
+  &__slider{
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    display: flex;
+    align-items: flex-end;
+    color: #181818;
+    margin-bottom: 22px;
+    @include media($sm){
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+  &__p{
+    margin-bottom: 70px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: #181818;
+    max-width: 780px;
+  }
+}
