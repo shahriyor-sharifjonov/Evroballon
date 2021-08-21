@@ -98,7 +98,7 @@ $('.main-slider_2').slick({
   slidesToScroll: 1,
   dots: true,
   autoplay: true,
-  autoplaySpeed: 1500,
+  autoplaySpeed: 1600,
   responsive: [
     {
       breakpoint: 768,
@@ -112,8 +112,8 @@ $('.main-slider_3').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   dots: true,
-  // autoplay: true,
-  // autoplaySpeed: 1500,
+  autoplay: true,
+  autoplaySpeed: 1500,
   responsive: [
     {
       breakpoint: 1200,
@@ -126,6 +126,28 @@ $('.main-slider_3').slick({
       settings: {
         arrows: false,
         slidesToShow: 2,
+      }
+    },
+});
+$('.advantages2__body').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 1600,
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
       }
     },
 });
