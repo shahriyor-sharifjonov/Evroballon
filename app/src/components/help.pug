@@ -1,0 +1,11 @@
+mixin help()
+  .help 
+    .help__body.container
+      h3.help__title Нужна помощь в подборе оборудования?
+      p.help__subtitle Запишитесь на консультацию. Наш специалист перезвонит вам.
+      form(action="").help__form
+        input(type="text" placeholder="Ваше имя").help__input
+        input(type="tel" placeholder="Номер телефона").help__input
+        button(type="submit").help__btn Записаться
+      p.help__p Нажимая на кнопку «Записаться» вы соглашаетесь на обработку персональных данных, получение sms и email с предложениями о новых акциях нашей компании.
+      img(src="images/question.webp", alt="").help__img

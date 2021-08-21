@@ -1,0 +1,144 @@
+.help{
+  margin-bottom: 70px;
+  padding: 0 15px;
+  &__body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 30px 70px;
+    position: relative;
+    overflow: hidden;
+    @include media($sm){
+      padding: 30px 10px;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      background: #012D5A;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: 10px;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__title{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 17px;
+    @include media($md){
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+  &__subtitle{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    @include media($md){
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 130%;
+      max-width: 300px;
+    }
+  }
+  &__form{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 17px;
+    @include media($lg){
+      flex-wrap: wrap;
+    }
+  }
+  &__input{
+    background: #FFFFFF;
+    border-radius: 34px;
+    border: none;
+    padding: 15px 30px;
+    margin-right: 30px;
+    font-family: inherit;
+    @include media($lg){
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    &:first-child{
+      max-width: 300px;
+      width: 100%;
+      min-width: 200px;
+      @include media($lg){
+        width: 100%;
+        margin: 0 auto 15px auto;
+      }
+    }
+    &:nth-child(2){
+      width: stretch;
+      @include media($lg){
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto 15px auto;
+      }
+    }
+  }
+  &__btn{
+    padding: 15px 50px;
+    background: #25A1D3;
+    border-radius: 34px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    @include media($lg){
+      max-width: 300px;
+      width: 100%;
+      margin: 0 auto 15px auto;
+    }
+  }
+  &__p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    align-self: start;
+    width: 100%;
+    max-width: 647px;
+    width: 100%;
+    color: #FFFFFF;
+    opacity: 0.7;
+    @include media($lg){
+      align-items: center;
+      text-align: center;
+    }
+    @include media($md){
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  &__img{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}
