@@ -175,3 +175,43 @@ $('.reviews__slider').slick({
     },
 });
 
+$('.useful__slider').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  dots: false,
+  autoplay: false,
+  autoplaySpeed: 1600,
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+});
+

@@ -64,3 +64,34 @@ mixin reviews()
                 img(src="images/grades.webp", alt="").reviews__star
                 p.reviews__date Иван <b>10.05.2020</b>
               a(href="#!").reviews__link Читать все отзывы → 
+
+mixin useful()
+  .useful
+    .useful__body.container
+      h2.products__title.useful__maintitle Полезные статьи и новости
+      .slider 
+        .slider__inner.useful__slider
+          .useful__item 
+            img(src="images/useful-1.webp", alt="").useful__img
+            .useful__content 
+              h3.useful__title Композитные газовые баллоны — как это сделано?
+              p.useful__p Процесс производства композитных баллонов достаточно сложен, ведь от примененных технологий зависят конечные...
+              a(href="#!").useful__link Читать
+          .useful__item 
+            img(src="images/useful-2.webp", alt="").useful__img
+            .useful__content 
+              h3.useful__title Акция “Черная пятница”
+              p.useful__p Рады сообщить Вам о старте тотальных скидок по акции "Черная пятница". На все баллоны норвежского производителя...
+              a(href="#!").useful__link Читать
+          .useful__item 
+            img(src="images/useful-3.webp", alt="").useful__img
+            .useful__content 
+              h3.useful__title Газификация на даче легко и доступно!
+              p.useful__p Мы рады предложить вам газобаллонную установку на четыре баллона от немецкого производителей газового...
+              a(href="#!").useful__link Читать
+          .useful__item 
+            img(src="images/useful-4.webp", alt="").useful__img
+            .useful__content 
+              h3.useful__title Комплект “Монтажник” по оптимальной цене.
+              p.useful__p Комплект идеально подойдет для монтажа натяжных потолков или для обогрева небольших помещений типа гаража, дач...
+              a(href="#!").useful__link Читать
