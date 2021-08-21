@@ -1,0 +1,9 @@
+mixin email()
+  .email 
+    .email__body.container 
+      h2.email__title Получайте новости об акциях первыми!
+      .email__col 
+        form.email__form(action="")
+          input(type="text" placeholder="Введите email").email__input
+          button(type="submit").email__btn Подписаться
+        p.email__p Нажимая на кнопку «Подписаться» вы соглашаетесь на обработку персональных данных, получение email с предложениями о новых акциях нашей компании.
