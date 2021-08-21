@@ -1,0 +1,50 @@
+.katalog{
+  padding-top: 30px;
+  padding-bottom: 60px;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: calc(33.333% - 40px);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include media($md){
+      width: calc(50% - 40px);
+    }
+    @include media($sm){
+      width: 100%;
+    }
+  }
+  &__image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F3F3F3;
+    border-radius: 7px;
+    margin-right: 25px;
+    padding: 7px;
+    @include media(992){
+      margin-right: 15px;
+    }
+  }
+  &__img{
+    width: 50px;
+    height: 50px;
+  }
+  &__p{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    color: #181818;
+    @include media(992){
+      font-size: 16px;
+    }
+  }
+}
