@@ -23,6 +23,68 @@ html(lang="ru")
           .categories__cats-item Четыре конфорки
           .categories__cats-item Настольные плиты
           .categories__cats-item Портативные плиты
+        .categories__row 
+          .categories__filter
+            .container
+              h2.categories__filter-title_show-on-mobile Фильтры <button>Сбросить</button> 
+              button(onclick="toggleFilter()").categories__filter-x
+                img(src="images/x.webp", alt="")
+              h2.categories__filter-title Материал корпуса
+              .categories__filter-chk
+                input(type="checkbox" id="chk1").categories__filter-checkbox
+                label(for="chk1").categories__filter-label цинковый сплав
+              .categories__filter-chk
+                input(type="checkbox" id="chk2").categories__filter-checkbox
+                label(for="chk2").categories__filter-label сталь
+
+              h2.categories__filter-title Цена
+              .categories__filter-row 
+                input(type="text" value="1200").categories__filter-input 
+                p -
+                input(type="text" value="7500").categories__filter-input 
+
+              h2.categories__filter-title Производители
+              .categories__filter-chk
+                input(type="checkbox" id="chk3").categories__filter-checkbox
+                label(for="chk3").categories__filter-label GOK
+              .categories__filter-chk
+                input(type="checkbox" id="chk4").categories__filter-checkbox
+                label(for="chk4").categories__filter-label Mondial Gnali Bocia
+              .categories__filter-chk
+                input(type="checkbox" id="chk5" disabled).categories__filter-checkbox
+                label(for="chk5").categories__filter-label.disabled GOK
+          .categories__main 
+            .categories__main-btns
+              button(onclick="openDrop(this)").categories__main-btn Сначала популярные <i class="i-bottom-arrow"></i>
+              ul.categories__main-list 
+                li.categories__main-li 
+                  a(href="#!").categories__main-link Сначала популярные 
+                li.categories__main-li 
+                  a(href="#!").categories__main-link Сначала дешевле
+                li.categories__main-li 
+                  a(href="#!").categories__main-link Сначала дороже
+                li.categories__main-li 
+                  a(href="#!").categories__main-link Сначала с высоким рейтингом 
+              button(onclick="openFilter()").categories__main-filbtn Фильтры <span>1</span>
+            .categories__content
+              include components/products.pug 
+              +product2
+              +product2
+              +product2
+              +product2
+              +product2
+              +product2
+              +product2
+              +product2
+              +product2
+            .categories__pagination 
+              button.categories__pagination-btn.i-left-arrow
+              button.categories__pagination-btn.active 1
+              button.categories__pagination-btn 2
+              button.categories__pagination-btn 3
+              button.categories__pagination-btn 4
+              button.categories__pagination-btn.i-right-arrow
+            
     include components/footer.pug 
     +footer
     script(src="scripts/categories.js") 

@@ -54,4 +54,293 @@
       }
     }
   }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+  &__filter{
+    width: 270px;
+    .container{
+      padding-left: 0;
+      margin-left: 0;
+      @include media(1200){
+        padding-top: 30px;
+        margin-left: auto;
+        padding-left: 15px;
+      }
+    }
+    @include media(1200){
+      display: none;
+      &.open{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        top: 154px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+        @include media(992){
+          top: 134px;
+        }
+      }
+    }
+    &-title{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 100%;
+      color: #181818;
+      margin-bottom: 20px;
+      &_show-on-mobile{
+        display: none;
+        @include media(1200){
+          margin-bottom: 30px;
+          display: block;
+        }
+        button{
+            border: none;
+            background: none;
+            margin-left: 30px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            
+            color: #E24C3F;
+        }
+      }
+    }
+    &-x{
+      display: none;
+      @include media(1200){
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 15px;
+        background: none;
+        border: none;
+      }
+    }
+    &-chk{
+      display: flex;
+      align-items: center;
+      margin-bottom: 13px;
+      &:nth-child(3){
+        margin-bottom: 30px;
+      }
+    }
+    &-checkbox{
+      width: 20px;
+      height: 20px;
+      margin-right: 13px;
+    }
+    &-row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      @include media(1200){
+        max-width: max-content;
+      }
+    }
+    &-input{
+      max-width: 120px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+      border: 2px solid #C4C4C4;
+      box-sizing: border-box;
+      border-radius: 3px;
+      font-family: inherit;
+      &+p{
+        @include media(1200){
+          margin: 0 10px;
+        }
+      }
+    }
+    &-label{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: #000000;
+      &.disabled{
+        color: #A6B0B9;
+      }
+    }
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    @include media($sm){
+      margin-bottom: 10px;
+    }
+    .products__item{
+      &:last-child{
+        @include media($sm){
+          display: none;
+        }
+      }
+      @include media($sm){
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__pagination{
+    display: none;
+    @include media($md){
+      display: flex;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+    &-btn{
+      width: 36px;
+      height: 36px;
+      border: 1px solid #A6B0B9;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background: none;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 100%;
+      text-align: center;
+      color: #A6B0B9;
+      &.active{
+        color: #25A1D3;
+        border: 1px solid #25A1D3;
+      }
+      &:not(:last-child){
+        margin-right: 5px;
+      }
+    }
+  }
+  &__mainitem{
+    max-width: calc(33.333% - 30px);
+    width: 100%;
+    margin-bottom: 30px;
+    @include media(1400){
+      max-width: calc(33.333% - 10px);
+    }
+    @include media($md){
+      max-width: calc(50% - 10px);
+    }
+  }
+  &__main{
+    position: relative;
+    width: calc(100% - 300px);
+    @include media(1200){    
+      width: 100%;
+    }
+    &-btns{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    &-filbtn{
+      background: #25A1D3;
+      border-radius: 31.2786px;
+      border: 1px solid transparent;
+      padding: 10px 14px; 
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 100%;
+      color: #FFFFFF;
+      font-family: inherit;
+      display: none;
+      @include media(1200){
+        display: block;
+      }
+      @include media($sm){
+        font-size: 12px;
+        line-height: 100%;  
+        padding: 9px 15px;
+        border: 0.744728px solid #25A1D3;
+        box-sizing: border-box;
+        border-radius: 31.2786px;
+      }
+      span{
+        border-radius: 50%;
+        border: 1px solid #fff;
+        padding: 2px 6px; 
+        margin-left: 3px;
+      }
+    }
+    &-btn{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #181818;
+      font-family: inherit;
+      border: none;
+      background: none;
+      cursor: pointer;
+      @include media($sm){
+        font-size: 12px;
+        line-height: 100%;  
+        padding: 9px 15px;
+        border: 0.744728px solid #25A1D3;
+        box-sizing: border-box;
+        border-radius: 31.2786px;
+      }
+      i{
+        margin-left: 4px;
+      }
+      &.active{
+        &~.categories__main-list{
+          display: flex;
+          @include media(1200){
+            top: 40px;
+          }
+        }
+      }
+    }
+    &-list{
+      position: absolute;
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      width: max-content;
+      padding: 20px;
+      z-index: 5;
+      top: 20px;
+    }
+    &-li{
+      &:not(:last-child){
+        margin-bottom: 15px;
+        @include media($sm){
+          margin-bottom: 7px;
+        }
+      }
+    }
+    &-link{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 130%;
+      color: #181818;
+      @include media($sm){
+        font-size: 14px;
+      }
+    }
+  }
 }
