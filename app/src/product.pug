@@ -1,0 +1,140 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Evroballon сайт интернет магазина")
+    title Evroballon
+    link(rel="preconnect" href="https://fonts.googleapis.com" async)
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin async)
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" async)
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header
+    main.main
+      .mainproduct.container
+        .mainproduct__cat Главная — Каталог — Газовые баллоны — Газовый баллон 12л с БЕЗОПАСНЫМ вентилем Сталь (НЗГА) Республика Беларусь
+        h2.mainproduct__title.products__title Газовый баллон 12л с БЕЗОПАСНЫМ вентилем Сталь (НЗГА) Республика Беларусь
+        .mainproduct__item 
+          .mainproduct__item-image 
+            img(src="images/mainproduct.webp", alt="").mainproduct__item-img
+            .mainproduct__slider.slider 
+              .mainproduct__slider-inner.slider__inner 
+                .mainproduct__slider-item 
+                  img(src="images/mainproduct.webp", alt="").mainproduct__slider-img
+                .mainproduct__slider-item 
+                  img(src="images/mainproduct.webp", alt="").mainproduct__slider-img
+                .mainproduct__slider-item 
+                  img(src="images/mainproduct.webp", alt="").mainproduct__slider-img
+                .mainproduct__slider-item 
+                  img(src="images/mainproduct.webp", alt="").mainproduct__slider-img
+                .mainproduct__slider-item 
+                  img(src="images/mainproduct.webp", alt="").mainproduct__slider-img
+                .mainproduct__slider-item 
+                  img(src="images/mainproduct.webp", alt="").mainproduct__slider-img
+          .mainproduct__item-content 
+            .mainproduct__item-content__top 
+              .mainproduct__item-content__top-left
+                img(src="images/grades.webp", alt="").mainproduct__item-stars
+                a(href="#!").mainproduct__item-reviews 3 отзыва
+              .mainproduct__item-btns 
+                a(href="#!").i-heart.products__item-top__btn.products__item-heart.mainproduct__item-content__top-btn 
+                a(href="#!").i-settings.products__item-top__btn.products__item-settings.mainproduct__item-content__top-btn 
+            .mainproduct__item-content__middle 
+              .mainproduct__item-title Основные характеристики
+              .mainproduct__item-row 
+                p.mainproduct__item-p Запорное устройство:
+                .mainproduct__item-dots 
+                p.mainproduct__item-p вентиль ВБ-2, клапан КБ-2
+              .mainproduct__item-row 
+                p.mainproduct__item-p Мax рабочее давление входящее:
+                .mainproduct__item-dots 
+                p.mainproduct__item-p 1 MPa (10 бар)
+              .mainproduct__item-row 
+                p.mainproduct__item-p Масса сжиженного газа (пропана), кг. , не более:
+                .mainproduct__item-dots 
+                p.mainproduct__item-p 5
+              .mainproduct__item-row 
+                p.mainproduct__item-p Рабочая температура:
+                .mainproduct__item-dots 
+                p.mainproduct__item-p -30С +70С
+              a(href="#!").mainproduct__item-link Читать все характеристики → 
+              p.mainproduct__item-price 1 801руб.
+              .mainproduct__item-btns2  
+                button.mainproduct__item-btn2.current Купить в один клик
+                button.mainproduct__item-btn2 В корзину
+              p.mainproduct__item-paragraph Самовывоз по адресу:  <br>Доставка по Москве и Московской области от 3 часов <br>Доставка по России 4-5 дней (курьером, CDEK, Boxberry, Почта России)
+        .mainproduct__categories.slider 
+          .mainproduct__categories-top.slider__inner
+            button(onclick="sliderButton('obzor')").mainproduct__categories-btn.active Обзор
+            button(onclick="sliderButton('xarakter')").mainproduct__categories-btn характеристики
+            button(onclick="sliderButton('otziv')").mainproduct__categories-btn Отзывы
+            button(onclick="sliderButton('oplata')").mainproduct__categories-btn Оплата
+            button(onclick="sliderButton('dostavka')").mainproduct__categories-btn доставка
+            button(onclick="sliderButton('instruksiya')").mainproduct__categories-btn Инструкции и сертификаты
+          .mainproduct__categories-content.obzor.active
+            p.mainproduct__categories-p Запорное устройство - вентиль итальянского производства (Cavagna Group) со сбросным клапаном и плавкой вставкой. Предохранительный клапан служит для сброса излишков газа при его превышении допустимого уровня давления,а плавкая вставка стравит весь газ при повышении температуры свыше 110 С. Сочетание технических характиристик данного запорного устройства делает баллон взрывобезопасным.
+          
+          
+          .mainproduct__categories-content.xarakter
+            p.mainproduct__categories-p xarakter
+          
+          
+          .mainproduct__categories-content.otziv
+            p.mainproduct__categories-p otziv
+          
+          
+          .mainproduct__categories-content.oplata
+            p.mainproduct__categories-p oplata
+          
+          
+          .mainproduct__categories-content.dostavka
+            .dostavka__content 
+              .dostavka__item 
+                .dostavka__item-top 
+                  .dostavka__item-image
+                    img(src="images/delivery.svg", alt="")
+                  p Доставка по Москве и Московской области
+                p.dostavka__item-p  Краткое описание. 2-3 абзаца. Принципы, порядок, сроки…. <br>— Самовывоз + описание, адрес, время работы <br>— Доставка курьером + описание, выбор курьерской службы <br>— Почта России + описание <br>— Срочная доставка + описание
+              .dostavka__item 
+                .dostavka__item-top 
+                  .dostavka__item-image
+                    img(src="images/plane.svg", alt="")
+                  p Доставка по России
+                p.dostavka__item-p  Краткое описание. 2-3 абзаца. Принципы, порядок, сроки…. <br>— Доставка курьером + описание, выбор курьерской службы <br>— CDEK <br>— Boxberry <br>— Почта России + описание <br>— Срочная доставка + описание ? (это есть у CDEK, Boxberry)
+
+              .dostavka__item 
+                .dostavka__item-top 
+                  .dostavka__item-image
+                    img(src="images/delivery.svg", alt="")
+                  p Предварительный расчет стоимости доставки
+                p.dostavka__item-p  Краткое описание. 2-3 абзаца. Принципы, порядок. <br>— Калькулятор предварительного расчета стоимости
+            .dostavka__calc   
+              p.dostavka__calc-p Калькулятор
+          
+          
+          .mainproduct__categories-content.instruksiya
+            p.instruksiya__title Инструкции и сертификаты
+            .instruksiya__item 
+              img(src="images/pdf.webp", alt="pdf").instruksiya__img
+              p.instruksiya__p Инструкция по использованию
+              a(href="#!").instruksiya__link 
+                img(src="images/download.webp", alt="download")
+                p Скачать 
+            .instruksiya__item 
+              img(src="images/pdf.webp", alt="pdf").instruksiya__img
+              p.instruksiya__p Сертификат качества
+              a(href="#!").instruksiya__link 
+                img(src="images/download.webp", alt="download")
+                p Скачать 
+
+
+
+
+    include components/footer.pug 
+    +footer
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js") 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js") 
+    script(src="scripts/index.js") 

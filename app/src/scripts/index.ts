@@ -76,7 +76,98 @@ if(document.getElementsByClassName('.products__item-heart')){
   })
 }
 
+// Slider Item Click
+if(document.getElementsByClassName('mainproduct__categories-btn')){
+  const sliderButtonEl = document.getElementsByClassName('mainproduct__categories-btn')
+  const sliderContent = document.getElementsByClassName('mainproduct__categories-content')
+  function sliderButton(el){
+    for(let i = 0; i < sliderContent.length; i++){
+      sliderContent[i].classList.remove('active');
+    }
+    let gs = document.getElementsByClassName(el);
+    gs[0].classList.add('active');
+  }
+  window.addEventListener('click', function(e){
+    for(let i = 0; i < sliderButtonEl.length; i++){
+      if(e.target == sliderButtonEl[i]){
+        for(let i = 0; i < sliderButtonEl.length; i++){
+          sliderButtonEl[i].classList.remove('active');
+        }
+      }
+      e.target.classList.add('active');
+    }
+  })
+}
+
+
 // Slider
+$('.mainproduct__categories-top').slick({
+  infinite: false,
+  slidesToShow: 6,
+  variableWidth: true,
+  slidesToScroll: 1,
+  arrows: false,
+  centerPadding: '50px',
+  touchThreshold: 15,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: true,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: true,
+      }
+    },
+    {
+      breakpoint: 450,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: true,  
+      }
+    },
+  ]
+});
+
+$('.mainproduct__slider-inner').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 450,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+  ]
+});
+
+
 $('.main-slider_1').slick({
   infinite: true,
   slidesToShow: 1,
@@ -91,6 +182,7 @@ $('.main-slider_1').slick({
         arrows: false
       }
     },
+  ]
 });
 $('.main-slider_2').slick({
   infinite: true,
@@ -106,6 +198,7 @@ $('.main-slider_2').slick({
         arrows: false
       }
     },
+  ]
 });
 $('.main-slider_3').slick({
   infinite: false,
@@ -128,6 +221,7 @@ $('.main-slider_3').slick({
         slidesToShow: 2,
       }
     },
+  ]
 });
 $('.advantages2__body').slick({
   slidesToShow: 3,
@@ -150,6 +244,7 @@ $('.advantages2__body').slick({
         slidesToShow: 1,
       }
     },
+  ]
 });
 
 $('.reviews__slider').slick({
@@ -173,6 +268,7 @@ $('.reviews__slider').slick({
         slidesToShow: 1,
       }
     },
+  ]
 });
 
 $('.useful__slider').slick({
@@ -213,5 +309,6 @@ $('.useful__slider').slick({
         dots: true,
       }
     },
+  ]
 });
 
