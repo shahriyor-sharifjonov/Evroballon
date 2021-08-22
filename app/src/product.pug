@@ -79,8 +79,36 @@ html(lang="ru")
           
           
           .mainproduct__categories-content.xarakter
-            p.mainproduct__categories-p xarakter
-          
+            .xarakter__item
+              p.xarakter__item-title Характеристики баллона
+              .xarakter__item-content
+                .xarakter__item-row
+                  p.xarakter__item-p Запорное устройство:
+                  .xarakter__item-dots 
+                  p.xarakter__item-p вентиль ВБ-2, клапан КБ-2
+                .xarakter__item-row  
+                  p.xarakter__item-p Рабочее давление (МПа)
+                  .xarakter__item-dots 
+                  p.xarakter__item-p 1,6
+            .xarakter__item
+              p.xarakter__item-title Массо-габаритные характеристики
+              .xarakter__item-content
+                .xarakter__item-row
+                  p.xarakter__item-p Масса сжиженного газа (пропана), кг., не более
+                  .xarakter__item-dots 
+                  p.xarakter__item-p 5
+                .xarakter__item-row  
+                  p.xarakter__item-p Вес пустого баллона (кг)
+                  .xarakter__item-dots 
+                  p.xarakter__item-p 6
+                .xarakter__item-row  
+                  p.xarakter__item-p Высота (мм)
+                  .xarakter__item-dots 
+                  p.xarakter__item-p 485
+                .xarakter__item-row  
+                  p.xarakter__item-p Диаметр (мм)
+                  .xarakter__item-dots 
+                  p.xarakter__item-p 222,6,3
           
           .mainproduct__categories-content.otziv
             p.otziv__title Отзывы
@@ -146,7 +174,6 @@ html(lang="ru")
                 p.oplata__item-top__p Наложенным платежом 
               p.oplata__item-p Краткое описание. 2-3 абзаца.
           
-          
           .mainproduct__categories-content.dostavka
             .dostavka__content 
               .dostavka__item 
@@ -171,7 +198,6 @@ html(lang="ru")
             .dostavka__calc   
               p.dostavka__calc-p Калькулятор
           
-          
           .mainproduct__categories-content.instruksiya
             p.instruksiya__title Инструкции и сертификаты
             .instruksiya__item 
@@ -186,7 +212,9 @@ html(lang="ru")
               a(href="#!").instruksiya__link 
                 img(src="images/download.webp", alt="download")
                 p Скачать 
-
+        include components/products.pug 
+        +products3
+        +products4
 
 
 
