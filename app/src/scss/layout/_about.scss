@@ -183,3 +183,35 @@
     }
   }
 }
+
+.delivery{
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    @include media(992){
+      flex-direction: column;
+    }
+  }
+  &__item{
+    width: 50%;
+    @include media(992){
+      width: 100%;
+    }
+    &.dostavka__calc{
+      height: 300px;
+    }
+  }
+}
+
+.transaction{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  @include media(992){
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,78 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Evroballon сайт интернет магазина")
+    title Evroballon
+    link(rel="preconnect" href="https://fonts.googleapis.com" async)
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin async)
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" async)
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header
+    main.main
+      .delivery.container
+        p.about__cat Главная — Доставка и оплата
+        h2.about__title Доставка
+        .delivery__items
+          .dostavka__item.delivery__item 
+            .dostavka__item-top 
+              .dostavka__item-image
+                img(src="images/delivery.svg", alt="")
+              p Доставка по Москве и Московской области
+            p.dostavka__item-p  Краткое описание. 2-3 абзаца. Принципы, порядок, сроки…. <br>— Самовывоз + описание, адрес, время работы <br>— Доставка курьером + описание, выбор курьерской службы <br>— Почта России + описание <br>— Срочная доставка + описание
+          .dostavka__item.delivery__item 
+            .dostavka__item-top 
+              .dostavka__item-image
+                img(src="images/coins.svg", alt="")
+              p Предварительный расчет <br>стоимости доставки
+            p.dostavka__item-p  Краткое описание. 2-3 абзаца. Принципы, порядок.<br>— Калькулятор предварительного расчета стоимости
+          .dostavka__item.delivery__item 
+            .dostavka__item-top 
+              .dostavka__item-image
+                img(src="images/plane.svg", alt="")
+              p Доставка по России
+            p.dostavka__item-p  Краткое описание. 2-3 абзаца. Принципы, порядок, сроки…. <br>— Доставка курьером + описание, выбор курьерской службы <br>— CDEK <br>— Boxberry <br>— Почта России + описание <br>— Срочная доставка + описание ? (это есть у CDEK, Boxberry)
+          .dostavka__calc.delivery__item   
+            p.dostavka__calc-p Калькулятор
+      .container 
+        h2.about__title Оплата
+      .transaction.container 
+        .oplata__item
+          .oplata__item-top 
+            .oplata__item-top__image
+              img(src="images/carta.svg" alt="").oplata__item-top__img
+            p.oplata__item-top__p Карта
+          p.oplata__item-p Краткое описание. 2-3 абзаца.
+        .oplata__item
+          .oplata__item-top 
+            .oplata__item-top__image
+              img(src="images/chek.svg" alt="").oplata__item-top__img
+            p.oplata__item-top__p Безналичная оплата на расчетный счет (для юридических лиц) 
+          p.oplata__item-p Краткое описание. 2-3 абзаца.
+        .oplata__item
+          .oplata__item-top 
+            .oplata__item-top__image
+              img(src="images/rubl.svg" alt="").oplata__item-top__img
+            p.oplata__item-top__p Наличными курьеру 
+          p.oplata__item-p Краткое описание. 2-3 абзаца.
+        .oplata__item
+          .oplata__item-top 
+            .oplata__item-top__image
+              img(src="images/vozvrat.svg" alt="").oplata__item-top__img
+            p.oplata__item-top__p Возврат денежных средств 
+          p.oplata__item-p Краткое описание. 2-3 абзаца.
+        .oplata__item
+          .oplata__item-top 
+            .oplata__item-top__image
+              img(src="images/koshelok.svg" alt="").oplata__item-top__img
+            p.oplata__item-top__p Наложенным платежом 
+          p.oplata__item-p Краткое описание. 2-3 абзаца.
+    include components/footer.pug 
+    +footer
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js") 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js") 
+    script(src="scripts/index.js") 
