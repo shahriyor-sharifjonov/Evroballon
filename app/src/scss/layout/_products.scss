@@ -267,9 +267,6 @@
     margin-bottom: 30px;
     padding: 5px;
     user-select: none;
-    @include media(1200){
-      max-width: 270px;
-    }
     @include media($md){
       max-width: 100%;
     }
@@ -282,11 +279,14 @@
       @include media(1200){
         margin: 0 auto 30px;
       }
+      @include media(992){
+        margin: 0 0 30px 0;
+      }
     }
     &-image{
       margin-right: 25px;
-      width: 64px;
-      height: 64px;
+      width: 75px;
+      height: 75px;
       background: #F3F3F3;
       border-radius: 7px;
       display: flex;
