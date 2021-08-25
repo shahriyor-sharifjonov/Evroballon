@@ -176,6 +176,15 @@
     }
   }
   &__logo{
+    @include media($lg){
+      flex: 1 0 auto;
+    }
+    @include media(400){
+      max-width: 100px;
+    }
+    @include media(340){
+      max-width: 80px;
+    }
     &-img{
       @include media($lg){
         display: none;
@@ -191,9 +200,13 @@
           width: 150px;
         }
         @include media($sm){
-          width: 96px;
-          margin-right: -20px;
+          margin-right: 0px;
           max-width: 100%;
+        }
+        @include media(394){
+          max-width: 100%;
+          width: 100%;
+          margin-right: 20px;
         }
       }
     }
@@ -352,7 +365,7 @@
   &__contacts{
     display: flex;
     align-items: center;
-    @include media($lg){
+    @include media(400){
       margin-left: auto;
     }
   }
