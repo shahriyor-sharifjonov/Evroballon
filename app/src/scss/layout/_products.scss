@@ -83,7 +83,7 @@
     &-row{
       display: flex;
       justify-content: center;
-      margin-bottom: 34px;
+      margin-bottom: 15px;
       @include media($sm){
         display: none;
       }
@@ -147,7 +147,7 @@
       }
     }
     &-btn{
-      margin-top: 16px;
+      margin-top: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
