@@ -146,9 +146,12 @@
       color: #333333;
       margin-bottom: 12px;
       max-width: 200px;
+      @include media(992){
+        font-size: 16px;
+        line-height: 110%;
+      }
       @include media($sm){
         font-size: 12px;
-        line-height: 110%;
       }
     }
     &-btn{
@@ -173,6 +176,9 @@
           color: #012D5A;
           border: 1px solid #012D5A;
         }
+      }
+      @include media($lg){
+        padding: 12px 0;
       }
       @include media($sm){
         border-radius: 24px;
