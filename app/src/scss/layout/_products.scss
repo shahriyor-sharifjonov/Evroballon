@@ -115,6 +115,9 @@
       font-size: 24px;
       line-height: 100%;
       color: #333333;
+      flex: 1 1 auto;
+      display: flex;
+      align-items: flex-end;
       @include media($sm){
         font-size: 18px;
         line-height: 100%;
@@ -124,7 +127,9 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 17px 20px;
+      justify-content: space-between;
+      padding: 5px 20px 15px 20px;
+      flex: 1 1 auto;
       width: 100%;
       @include media($sm){
         margin-bottom: 11px;

@@ -204,8 +204,9 @@ $('.main-slider_3').slick({
   infinite: false,
   slidesToShow: 4,
   slidesToScroll: 1,
+  adaptiveHeight: false,
   dots: true,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 1500,
   responsive: [
     {

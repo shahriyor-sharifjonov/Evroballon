@@ -148,6 +148,12 @@
     &-track{
       display: flex;
     }
+    &-slide{
+      // height: inherit !important;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: flex-start;
+    }
     &-arrow{
       position: absolute;
       top: 50%;
