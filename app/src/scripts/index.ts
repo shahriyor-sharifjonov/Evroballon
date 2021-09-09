@@ -313,3 +313,11 @@ $('.useful__slider').slick({
   ]
 });
 
+window.onclick = function(e){
+  if(e.target.classList.contains('mainproduct__slider-item')){
+    let imgForChange = document.querySelector('.mainproduct__item-img')
+    let sliderImg = e.target.childNodes[1].src
+    console.log(sliderImg);
+    imgForChange.src = sliderImg
+  }
+}
