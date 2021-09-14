@@ -83,6 +83,7 @@ if(document.getElementsByClassName('mainproduct__categories-btn')){
 
   window.addEventListener('click', function(e){
     if(e.target.classList.contains('mainproduct__categories-btn') && e.target.classList.contains('active')){
+      e.target.classList.add('toggle')
       setTimeout(() => {
         e.target.parentElement.childNodes[1].classList.remove('toggle')
       }, 0.0000000000001);
@@ -90,9 +91,7 @@ if(document.getElementsByClassName('mainproduct__categories-btn')){
   })
 
   function sliderButton(el){
-    for(let i = 0; i < sliderContent.length; i++){
-      
-      
+    if(window.innerWidth >= 992){
       for(let i = 0; i < sliderContent.length; i++){
         if(sliderContent[i].classList.contains('open')){
           sliderContent[i].classList.add('toggle');
@@ -100,34 +99,71 @@ if(document.getElementsByClassName('mainproduct__categories-btn')){
             sliderContent[i].classList.remove('toggle');
           }, 1000);
         }
+        sliderContent[i].classList.remove('active');
+        sliderContent[i].classList.remove('open'); 
       }
-      // if(!sliderContent[i].classList.contains('open')){
-      //   sliderContent[i].classList.add('toggle');
-      //   setTimeout(() => {
-      //     sliderContent[i].classList.remove('toggle');
-      //   }, 1000);
-      // }
       
-      sliderContent[i].classList.remove('active');
-      sliderContent[i].classList.remove('open'); 
+  
+      let gs = document.getElementsByClassName(el);
+      gs[0].classList.add('active');  
+      gs[0].classList.add('open');
+    }else{
+      let gs = document.getElementsByClassName(el);
+      gs[0].classList.toggle('active');
+      gs[0].classList.toggle('open');
     }
-    
-
-    let gs = document.getElementsByClassName(el);
-    gs[0].classList.add('active');  
-    gs[0].classList.add('open');
   }
-  window.addEventListener('click', function(e){
-    for(let i = 0; i < sliderButtonEl.length; i++){
-      if(e.target == sliderButtonEl[i]){
-        for(let i = 0; i < sliderButtonEl.length; i++){
-          sliderButtonEl[i].classList.remove('active');
-        }
-      }
-      e.target.classList.add('active');
-    }
+
     
+    window.addEventListener('click', function(e){
+      if(window.innerWidth >= 992){
+        for(let i = 0; i < sliderButtonEl.length; i++){
+          if(e.target == sliderButtonEl[i]){
+            for(let i = 0; i < sliderButtonEl.length; i++){
+              sliderButtonEl[i].classList.remove('active');
+            }
+          }
+          e.target.classList.add('active');
+        }
+      }else{
+        e.target.classList.toggle('active');
+      }
+    })
+    if(document.getElementsByClassName('.mainproduct__categories-div')){
+      var mainBody = document.querySelector('.mainproduct__categories');
+      var top1 = document.querySelector('.mainproduct__categories-obzor');
+      var top2 = document.querySelector('.mainproduct__categories-xarakter');
+      var top3 = document.querySelector('.mainproduct__categories-otziv');
+      var top4 = document.querySelector('.mainproduct__categories-oplata');
+      var top5 = document.querySelector('.mainproduct__categories-dostavka');
+      var top6 = document.querySelector('.mainproduct__categories-instruksiya');
+      var content1 = document.querySelector('.obzor');
+      var content2 = document.querySelector('.xarakter');
+      var content3 = document.querySelector('.otziv');
+      var content4 = document.querySelector('.oplata');
+      var content5 = document.querySelector('.dostavka');
+      var content6 = document.querySelector('.instruksiya');
+      window.addEventListener('load', function(){
+        if(window.innerWidth < 992){
+          top1.append(content1)
+          top2.append(content2)
+          top3.append(content3)
+          top4.append(content4)
+          top5.append(content5)
+          top6.append(content6)
+        }else{
+          mainBody.append(content1)
+          mainBody.append(content2)
+          mainBody.append(content3)
+          mainBody.append(content4)
+          mainBody.append(content5)
+          mainBody.append(content6)
+        }
+      })
+    }
   })
+
+  
 }
 
 
@@ -316,52 +352,4 @@ window.onclick = function(e){
 }
 
 
-if(document.getElementsByClassName('.mainproduct__categories-div')){
-  var mainBody = document.querySelector('.mainproduct__categories');
-  var top1 = document.querySelector('.mainproduct__categories-obzor');
-  var top2 = document.querySelector('.mainproduct__categories-xarakter');
-  var top3 = document.querySelector('.mainproduct__categories-otziv');
-  var top4 = document.querySelector('.mainproduct__categories-oplata');
-  var top5 = document.querySelector('.mainproduct__categories-dostavka');
-  var top6 = document.querySelector('.mainproduct__categories-instruksiya');
-  var content1 = document.querySelector('.obzor');
-  var content2 = document.querySelector('.xarakter');
-  var content3 = document.querySelector('.otziv');
-  var content4 = document.querySelector('.oplata');
-  var content5 = document.querySelector('.dostavka');
-  var content6 = document.querySelector('.instruksiya');
-  window.addEventListener('resize', function(){
-    if(window.innerWidth < 992){
-      top1.append(content1)
-      top2.append(content2)
-      top3.append(content3)
-      top4.append(content4)
-      top5.append(content5)
-      top6.append(content6)
-    }else{
-      mainBody.append(content1)
-      mainBody.append(content2)
-      mainBody.append(content3)
-      mainBody.append(content4)
-      mainBody.append(content5)
-      mainBody.append(content6)
-    }
-  })
-  window.addEventListener('load', function(){
-    if(window.innerWidth < 992){
-      top1.append(content1)
-      top2.append(content2)
-      top3.append(content3)
-      top4.append(content4)
-      top5.append(content5)
-      top6.append(content6)
-    }else{
-      mainBody.append(content1)
-      mainBody.append(content2)
-      mainBody.append(content3)
-      mainBody.append(content4)
-      mainBody.append(content5)
-      mainBody.append(content6)
-    }
-  })
-}
+
