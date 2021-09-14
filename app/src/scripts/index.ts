@@ -81,31 +81,31 @@ if(document.getElementsByClassName('mainproduct__categories-btn')){
   const sliderButtonEl = document.getElementsByClassName('mainproduct__categories-btn')
   const sliderContent = document.getElementsByClassName('mainproduct__categories-content')
 
-  window.addEventListener('click', function(e){
-    if(e.target.classList.contains('mainproduct__categories-btn') && e.target.classList.contains('active')){
-      e.target.classList.add('toggle')
-      setTimeout(() => {
-        e.target.parentElement.childNodes[1].classList.remove('toggle')
-      }, 0.0000000000001);
-    }
-  })
+  // window.addEventListener('click', function(e){
+    // if(e.target.classList.contains('mainproduct__categories-btn') && e.target.classList.contains('active')){
+    //   e.target.classList.add('toggle')
+    //   setTimeout(() => {
+    //     e.target.parentElement.childNodes[1].classList.remove('toggle')
+    //   }, 0.0000000000001);
+    // }
+  // })
 
   function sliderButton(el){
     if(window.innerWidth >= 992){
       for(let i = 0; i < sliderContent.length; i++){
-        if(sliderContent[i].classList.contains('open')){
-          sliderContent[i].classList.add('toggle');
-          setTimeout(() => {
-            sliderContent[i].classList.remove('toggle');
-          }, 1000);
-        }
+        // if(sliderContent[i].classList.contains('open')){
+        //   sliderContent[i].classList.add('toggle');
+        //   setTimeout(() => {
+        //     sliderContent[i].classList.remove('toggle');
+        //   }, 1000);
+        // }
         sliderContent[i].classList.remove('active');
         sliderContent[i].classList.remove('open'); 
       }
       
   
       let gs = document.getElementsByClassName(el);
-      gs[0].classList.add('active');  
+      gs[0].classList.add('active');
       gs[0].classList.add('open');
     }else{
       let gs = document.getElementsByClassName(el);
