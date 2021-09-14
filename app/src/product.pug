@@ -68,15 +68,21 @@ html(lang="ru")
               p.mainproduct__item-paragraph Самовывоз по адресу:  <br>Доставка по Москве и Московской области от 3 часов <br>Доставка по России 4-5 дней (курьером, CDEK, Boxberry, Почта России)
         .mainproduct__categories.slider 
           .mainproduct__categories-top.slider__inner
-            button(onclick="sliderButton('obzor')").mainproduct__categories-btn.active Обзор
-            button(onclick="sliderButton('xarakter')").mainproduct__categories-btn характеристики
-            button(onclick="sliderButton('otziv')").mainproduct__categories-btn Отзывы
-            button(onclick="sliderButton('oplata')").mainproduct__categories-btn Оплата
-            button(onclick="sliderButton('dostavka')").mainproduct__categories-btn доставка
-            button(onclick="sliderButton('instruksiya')").mainproduct__categories-btn Инструкции и сертификаты
-          .mainproduct__categories-content.obzor.active
+            .mainproduct__categories-obzor.mainproduct__categories-div
+              button(onclick="sliderButton('obzor')").mainproduct__categories-btn.active Обзор <img src="images/arrow-down.svg">
+            .mainproduct__categories-xarakter.mainproduct__categories-div
+              button(onclick="sliderButton('xarakter')").mainproduct__categories-btn характеристики <img src="images/arrow-down.svg">
+            .mainproduct__categories-otziv.mainproduct__categories-div
+              button(onclick="sliderButton('otziv')").mainproduct__categories-btn Отзывы <img src="images/arrow-down.svg">
+            .mainproduct__categories-oplata.mainproduct__categories-div
+              button(onclick="sliderButton('oplata')").mainproduct__categories-btn Оплата <img src="images/arrow-down.svg">
+            .mainproduct__categories-dostavka.mainproduct__categories-div
+              button(onclick="sliderButton('dostavka')").mainproduct__categories-btn доставка <img src="images/arrow-down.svg">
+            .mainproduct__categories-instruksiya.mainproduct__categories-div
+              button(onclick="sliderButton('instruksiya')").mainproduct__categories-btn Инструкции и сертификаты <img src="images/arrow-down.svg">
+
+          .mainproduct__categories-content.obzor.active.open
             p.mainproduct__categories-p Запорное устройство - вентиль итальянского производства (Cavagna Group) со сбросным клапаном и плавкой вставкой. Предохранительный клапан служит для сброса излишков газа при его превышении допустимого уровня давления,а плавкая вставка стравит весь газ при повышении температуры свыше 110 С. Сочетание технических характиристик данного запорного устройства делает баллон взрывобезопасным.
-          
           
           .mainproduct__categories-content.xarakter
             .xarakter__item
@@ -111,7 +117,7 @@ html(lang="ru")
                   p.xarakter__item-p 222,6,3
           
           .mainproduct__categories-content.otziv
-            p.otziv__title Отзывы
+            p.otziv__title.dn Отзывы
             p.otziv__p Для расчёта рейтинга используются общие оценки товара и оценки по характеристикам за всё время. <br>Оставьте свой отзыв о товаре: <br>Наушники True Wireless Samsung Galaxy Buds Live черный (SM-R180N)
             button.otziv__btn Оставить отзыв
             .otziv__item 
@@ -199,7 +205,7 @@ html(lang="ru")
               p.dostavka__calc-p Калькулятор
           
           .mainproduct__categories-content.instruksiya
-            p.instruksiya__title Инструкции и сертификаты
+            p.instruksiya__title.dn Инструкции и сертификаты
             .instruksiya__item 
               img(src="images/pdf.webp", alt="pdf").instruksiya__img
               p.instruksiya__p Инструкция по использованию
@@ -212,6 +218,7 @@ html(lang="ru")
               a(href="#!").instruksiya__link 
                 img(src="images/download.webp", alt="download")
                 p Скачать 
+        
         include components/products.pug 
         +products3
         +products4
